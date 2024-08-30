@@ -1,0 +1,92 @@
+<section id="booking-form-section" class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-extrabold text-gray-800 text-center mb-8">Book Your Stay</h2>
+    <form id="booking-form" class="space-y-6">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="check-in" class="block text-sm font-medium text-gray-700">Check-in Date</label>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <i class="fas fa-calendar-alt text-gray-400"></i>
+            </div>
+            <input type="date" name="check-in" id="check-in" class="focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" required>
+          </div>
+        </div>
+        <div>
+          <label for="check-out" class="block text-sm font-medium text-gray-700">Check-out Date</label>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <i class="fas fa-calendar-alt text-gray-400"></i>
+            </div>
+            <input type="date" name="check-out" id="check-out" class="focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" required>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="guests" class="block text-sm font-medium text-gray-700">Number of Guests</label>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <i class="fas fa-user-friends text-gray-400"></i>
+            </div>
+            <input type="number" name="guests" id="guests" min="1" class="focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" required>
+          </div>
+        </div>
+        <div>
+          <label for="property" class="block text-sm font-medium text-gray-700">Select Property</label>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <i class="fas fa-home text-gray-400"></i>
+            </div>
+            <select name="property" id="property" class="focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" required>
+              <option value="">Choose a property</option>
+              <option value="property1">Luxury Villa</option>
+              <option value="property2">Beachfront Cottage</option>
+              <option value="property3">Mountain Retreat</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+        <div class="mt-1 relative rounded-md shadow-sm">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <i class="fas fa-user text-gray-400"></i>
+          </div>
+          <input type="text" name="full-name" id="full-name" class="focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" required>
+        </div>
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <div class="mt-1 relative rounded-md shadow-sm">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <i class="fas fa-envelope text-gray-400"></i>
+          </div>
+          <input type="email" name="email" id="email" class="focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" required>
+        </div>
+      </div>
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+        <div class="mt-1 relative rounded-md shadow-sm">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <i class="fas fa-phone text-gray-400"></i>
+          </div>
+          <input type="tel" name="phone" id="phone" class="focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" required>
+        </div>
+      </div>
+      <div>
+        <label for="special-requests" class="block text-sm font-medium text-gray-700">Special Requests</label>
+        <div class="mt-1">
+          <textarea id="special-requests" name="special-requests" rows="3" class="shadow-sm focus:ring-cyan-600 focus:border-cyan-600 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-150 ease-in-out">
+          Book Now
+        </button>
+      </div>
+    </form>
+    <div id="error-message" class="mt-4 text-red-500 text-sm hidden"></div>
+    <div id="success-message" class="mt-4 text-green-500 text-sm hidden"></div>
+  </div>
+</section>
